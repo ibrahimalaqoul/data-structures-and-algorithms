@@ -7,6 +7,8 @@ The last thing asked for creating a certain string which takes the node values a
 ## Approach & Efficiency
 while loop because this kind of loop does't have starting and ending values so it will be flixable with the condition untill the condition is fale. 
 BigO O(1).
+### Efficiency :
+linked list is usually efficient when it comes to adding and removing most elements, but can be very slow to search and find a single element.
 ## API
 **insert** : it inserts a value to the beginning of the linked list if the linked list is empty it or not.
 
