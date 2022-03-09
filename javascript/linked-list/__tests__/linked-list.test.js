@@ -1,4 +1,5 @@
 'use strict';
+const { it } = require('eslint/lib/rule-tester/rule-tester');
 // Require our linked list implementation
 const LinkedLilst = require('../index');
 
@@ -40,5 +41,57 @@ describe('Linked List', () => {
     LL.insert('b');
     LL.insert('a');
     expect(LL.toString()).toBe("{ a } -> { b } -> { c } -> NULL");
+  })
+  it('testing append method',()=>{
+    const LL = new LinkedLilst() ;
+    LL.append('A');
+    LL.append('B');
+    LL.append('C');
+    expect(LL.head.value).toBe('A');
+    expect(LL.head.next.value).toBe('B');
+    expect(LL.head.next.next.value).toBe('C');
+    expect(LL.head.next.next.next).toBeNull();
+  })
+
+
+  it('testing insertbefore  method',()=>{
+    const LL = new LinkedLilst() ;
+    LL.insert('D')
+    LL.insert('C')
+    LL.insert('B')
+    LL.insert('A')
+    LL.insertBefore('C','F');// A,B,F,C,D
+    expect(LL.head.value).toBe('A');
+    expect(LL.head.next.value).toBe('B');
+    expect(LL.head.next.next.value).toBe('F');
+    expect(LL.head.next.next.next.value).toBe('C');
+    expect(LL.head.next.next.next.next.value).toBe('D');
+    expect(LL.head.next.next.next.next.next).toBeNull();
+  })
+  it('testing insertAfter  method',()=>{
+    const LL = new LinkedLilst() ;
+    LL.insert('D')
+    LL.insert('C')
+    LL.insert('B')
+    LL.insert('A')
+    LL.insertAfter('C','F');// A,B,C,F,D
+    expect(LL.head.value).toBe('A');
+    expect(LL.head.next.value).toBe('B');
+    expect(LL.head.next.next.value).toBe('C');
+    expect(LL.head.next.next.next.value).toBe('F');
+    expect(LL.head.next.next.next.next.value).toBe('D');
+    expect(LL.head.next.next.next.next.next).toBeNull();
+  })
+  it('testing  the position of vaule',()=>{
+    const LL = new LinkedLilst() ;
+    LL.append(1);
+    LL.append(2);
+    LL.append(3);
+    expect(LL.Kth(0)).toBe(3);
+    expect(LL.Kth(1)).toBe(2);
+    expect(LL.Kth(3)).toBe(1);  
+    expect(LL.Kth(7)).toEqual('exception')
+    expect(LL.Kth(-1)).toEqual('exception')
+
   })
 });

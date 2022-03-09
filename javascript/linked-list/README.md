@@ -6,7 +6,27 @@ the challange asked me to create an empty linked list and node also inserting th
 The last thing asked for creating a certain string which takes the node values as "{ a } -> { b } -> { c } -> NULL".
 ## Approach & Efficiency
 while loop because this kind of loop does't have starting and ending values so it will be flixable with the condition untill the condition is fale. 
-BigO O(1).
+Also,The challange asks me to create three methods one for append, Also one for addBefore , and one fore AddAfter.
+
+### kth method
+the challange asked us
+to ask give the output of a specific index from the right to the left of the linked list
+
+insert --> BigO O(1).
+include --> BigO O(n).
+toString --> BigO O(n).
+append --> BigO O(1).
+addBefore --> BigO O(n).
+addAgter --> BigO O(n).
+Kth ----> BigO o(n)
+## Whiteboard Process
+![](./append.png)
+![](./insertBefore.png)
+![](./insertAfter.png)
+![](./Kth.png)
+
+## Solution
+npm test linked-list.test.js
 ### Efficiency :
 linked list is usually efficient when it comes to adding and removing most elements, but can be very slow to search and find a single element.
 ## API
