@@ -94,4 +94,20 @@ describe('Linked List', () => {
     expect(LL.Kth(-1)).toEqual('exception')
 
   })
+  it("zipLists method ", () => {
+    const ll1 = new LinkedLilst();
+    const ll2 = new LinkedLilst();
+    ll1.insert(1);
+    ll1.insert(5);
+    ll1.insert(3);
+    ll2.insert(4);
+    ll2.insert(5);
+    ll2.insert(6);
+
+
+  expect(ll1.zipLists(ll1,ll2)).toBe("{ 3 } -> { 6 } -> { 5 } -> { 5 } -> { 1 } -> { 4 } -> NULL")
+})
+
+
+
 });
