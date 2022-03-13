@@ -20,13 +20,13 @@ append --> BigO O(1).
 addBefore --> BigO O(n).
 addAgter --> BigO O(n).
 Kth ----> BigO o(n)
-
+zipLists ---->BigO o(n)
 ## Whiteboard Process
 ![](./append.png)
 ![](./insertBefore.png)
 ![](./insertAfter.png)
 ![](./Kth.png)
-
+![](./chal08.png)
 
 ## Solution
 npm test linked-list.test.js
