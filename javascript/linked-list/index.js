@@ -3,7 +3,8 @@ const Node = require('./Node')
 class LinkedList {
     constructor() {
         this.head = null;
-        this.length =0;
+        this.length = 0;
+        this.tail = null;
     }
 
     insert(value) {
@@ -95,42 +96,46 @@ class LinkedList {
 
     }
 
-    Kth(k){
+    Kth(k) {
         let current = this.head;
-        let LLlength =0;
-        while (current!=null) {
-            current=current.next;
+        let LLlength = 0;
+        while (current != null) {
+            current = current.next;
             LLlength++;
         }
-        if (k < 0 ||k > LLlength) {
-            return'exception';
+        if (k < 0 || k > LLlength) {
+            return 'exception';
         } else {
-            LLlength = LLlength-1-k;
+            LLlength = LLlength - 1 - k;
             current = this.head;
-        while (LLlength > 0) {
-            current = current.next;
-            LLlength--;
+            while (LLlength > 0) {
+                current = current.next;
+                LLlength--;
+            }
+            return current.value;
         }
-        return current.value;
-        }
- 
+
     }
- 
-    zipLists(list1 , list2){
+
+    zipLists(list1, list2) {
         let current1 = list1.head;
         let current2 = list2.head;
-        while(list2.head !=null && current1!= null){
-        list2.head=list2.head.next;
-        current2.next=current1.next;
-        current1.next=current2;
-        current2=list2.head;
-        current1=current1.next.next;
-        this.length++;
+        while (list2.head != null && current1 != null) {
+            list2.head = list2.head.next;
+            current2.next = current1.next;
+            current1.next = current2;
+            current2 = list2.head;
+            current1 = current1.next.next;
+            this.length++;
         }
-        while( list2.head != null){list1.append(list2.head.value); list2.head=list2.head.next; }
+        while (list2.head != null) { list1.append(list2.head.value); list2.head = list2.head.next; }
         this.length++;
-      return list1.toString();
-        }
+        return list1.toString();
+    }
+
+
+       
 }
+// head->[t]->[a]->[c]->[o]->[c]->[a]->[t]
 
 module.exports = LinkedList;
