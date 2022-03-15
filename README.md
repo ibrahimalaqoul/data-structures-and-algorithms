@@ -9,3 +9,4 @@
 * [challange06,linked-list](https://github.com/ibrahimalaqoul/data-structures-and-algorithms/blob/main/javascript/linked-list/README.md)
 * [challange07,Linked-list](https://github.com/ibrahimalaqoul/data-structures-and-algorithms/blob/main/javascript/linked-list/README.md)
 * [challange08,Linked-list](https://github.com/ibrahimalaqoul/data-structures-and-algorithms/blob/main/javascript/linked-list/README.md)
+* [challange 10 , Stack and Queues](https://github.com/ibrahimalaqoul/data-structures-and-algorithms/blob/main/stack-Queue/README.MD)
