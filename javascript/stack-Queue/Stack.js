@@ -15,6 +15,8 @@ class Stack {
         } else {
             node.next = this.top;
             this.top = node
+            this.length++;
+
         }
 
     }
@@ -44,6 +46,8 @@ class Stack {
             return false;
         }
     }
+
+
 }
 
 
