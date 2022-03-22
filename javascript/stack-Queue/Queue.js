@@ -11,9 +11,11 @@ class Queue{
         if (this.front == null) {
             this.front = node;
             this.tail = node;
+            this.length++
         }
         this.tail.next = node;
         this.tail = node;
+        this.length++;
     }
 
     dequeue(){
@@ -23,13 +25,14 @@ class Queue{
         let current = this.front;
         this.front = current.next;
         current.next=null;
+        this.length--;
         return current.value;
     }
     
     peek() {
         if (this.front == null) {
           return "exception"  
-        } return this.front;        
+        } return this.front.value;        
     }
 
     isEmpty(){
