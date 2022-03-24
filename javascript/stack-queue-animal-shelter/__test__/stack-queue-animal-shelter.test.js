@@ -18,11 +18,18 @@ describe('Testing the stack-queue-animal-shelter classes',()=>{
       })  
       it('testing enqueue method for dog class',()=>{
         const newAnimal = new AnimalShelter();
-         const newDog = new Dog("Dog");; 
+         const newDog = new Dog("Dog");
          newAnimal.enqueue(newDog);
          console.log(newAnimal.dequeue());
          expect(newAnimal.queue.front.value.Name).toBe("Dog")        
          expect(typeof newAnimal.dequeue("Dog")).toEqual("object")
 
       })
+      it('testing null returning',()=>{
+        const x = new AnimalShelter();
+        const newOne = {Name : "donkey"};
+        x.enqueue(newOne);
+        expect( x.dequeue("donkey")).toEqual(null);
+      })
+      
 })
