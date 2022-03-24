@@ -8,10 +8,14 @@ class AnimalShelter{
         this.queue=new Queue();
     }
     enqueue(AnimalObj){
-        this.queue.enqueue(AnimalObj)
+        if(typeof AnimalObj == "object"){
+            this.queue.enqueue(AnimalObj)
+
+        }
     }
 
     dequeue(value){
+
         if (this.queue.front.Name == value) {
         let removedAnimal =   this.queue.front.value;
             this.queue.dequeue();
