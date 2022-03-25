@@ -36,7 +36,7 @@ class Stack {
     peek() {
         if (this.top == null) {
           return "exception"  
-        } return this.top;        
+        } return this.top.value;        
     }
 
     isEmpty(){
