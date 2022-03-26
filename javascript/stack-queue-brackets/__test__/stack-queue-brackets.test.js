@@ -2,16 +2,24 @@ const stackQueueBracketsfun = require('../stack-queue-brackets')
 
 describe('testing',()=>{
     let str = "(fasnaf()kjf)"
-    it('testing create method',()=>{
+    it('testing a right string',()=>{
         expect(stackQueueBracketsfun(str)).toBeTruthy();
     })
-    it('testing create method',()=>{
+    it('testing if the sting is empty to return null',()=>{
         let str1 = ""
         expect(stackQueueBracketsfun(str1)).toBeNull();
     })
 
-    it('testing create method',()=>{
-        let str1 = "{"
+    it('testing wrong string',()=>{
+        let str1 = "}{][)("
+        expect(stackQueueBracketsfun(str1)).toBeFalsy();
+    })
+    it('testing closing brackets only',()=>{
+        let str1 = "}])"
+        expect(stackQueueBracketsfun(str1)).toBeFalsy();
+    })
+    it('testing openning brackets only ',()=>{
+        let str1 = "([{"
         expect(stackQueueBracketsfun(str1)).toBeFalsy();
     })
 })

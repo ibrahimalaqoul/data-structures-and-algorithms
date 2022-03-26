@@ -19,6 +19,8 @@ function stackQueueBrackets(str){
         }
         else if (element == ']' && newStack.peek() == '[') {
             newStack.pop();
+        } else if (element == '}' || element == ')' || element == ']'){
+            newStack.push(element);
         }
 
     })
