@@ -42,6 +42,9 @@ describe('testing BinaryTree',()=>{
         let output = [4,5,2,6,7,3,1];
         expect(tree.postOrder()).toEqual(output)
     })  
+    it('testing the getMax method',()=>{
+        expect(tree.Max()).toEqual(7)
+    })
 })
 
 describe('testing Binary search tree',()=>{

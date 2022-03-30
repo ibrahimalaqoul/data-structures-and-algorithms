@@ -11,3 +11,11 @@ inOrder ---> BigO o(n^2)
 postOrder ---> BigO o(n^2)
 add ---> BigO o(n)
 contains ---> BigO o(1).
+isEmpty ----> BigO o(1).
+max ---> BigO o(n).
+
+# whiteBoard 
+![](./chal16img.png)
+
+# solution 
+### trees.test.js
