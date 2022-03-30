@@ -48,6 +48,16 @@ class BinaryTree {
         recTraverse(this.root)
         return arr;
     }
+    Max(){
+        let arr = this.preOrder();
+        let max = 0;
+     for (let i = 0; i < arr.length; i++) {
+        if (arr[i]>max) {
+            max = arr[i];
+        }
+     }
+     return max;
+    }
 }
 
 class BST extends BinaryTree {
@@ -101,6 +111,7 @@ class BST extends BinaryTree {
         }
         return false
     }
+    
 }
 module.exports = {
     BT: BinaryTree,
