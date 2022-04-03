@@ -44,6 +44,10 @@ describe('testing BinaryTree',()=>{
     })  
     it('testing the getMax method',()=>{
         expect(tree.Max()).toEqual(7)
+    }) 
+    it('testing the BreadthiFrst method',()=>{
+        let output = [1,2,3,4,5,6,7];
+        expect(tree.BreadthiFrst()).toEqual(output)
     })
 })
 
@@ -83,5 +87,6 @@ describe('testing Binary search tree',()=>{
         expect(binarySearchTree.contains(90)).toBe(false);
 
     })
+
 })
 
