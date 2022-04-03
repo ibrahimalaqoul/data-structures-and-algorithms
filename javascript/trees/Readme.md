@@ -13,9 +13,9 @@ add ---> BigO o(n)
 contains ---> BigO o(1).
 isEmpty ----> BigO o(1).
 max ---> BigO o(n).
-
+BreadthFirst ----> BigO o(n)
 # whiteBoard 
 ![](./chal16img.png)
-
+![](./chal17img.png)
 # solution 
 ### trees.test.js

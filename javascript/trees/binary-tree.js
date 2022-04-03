@@ -48,17 +48,38 @@ class BinaryTree {
         recTraverse(this.root)
         return arr;
     }
-    Max(){
+    Max() {
         let arr = this.preOrder();
         let max = 0;
-     for (let i = 0; i < arr.length; i++) {
-        if (arr[i]>max) {
-            max = arr[i];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
         }
-     }
-     return max;
+        return max;
     }
+
+    BreadthiFrst() {
+        let arr = [];
+        let qArr = [];
+        qArr.push(this.root);
+        while (qArr.length > 0) {
+            let current = qArr.shift();
+            arr.push(current.value);
+            if (current.left != null) {
+                qArr.push(current.left);
+            }
+            if (current.right != null) {
+                qArr.push(current.right);
+
+            }
+        }
+        return arr;
+    }
+
 }
+
+
 
 class BST extends BinaryTree {
     constructor(root = null) {
@@ -72,7 +93,7 @@ class BST extends BinaryTree {
             return this;
         }
         let current = this.root;
-            while (current) {
+        while (current) {
             if (value < current.value) {
                 if (current.left === null) {
                     current.left = Node;
@@ -96,24 +117,24 @@ class BST extends BinaryTree {
             return "exception the tree is empty";
         }
         let current = this.root;
-        while(current){
+        while (current) {
             if (current.value === value) {
                 return true;
-            } 
+            }
             if (value < current.value) {
                 current = current.left;
             }
-            
+
             if (value > current.value) {
-                    current = current.right;
+                current = current.right;
             }
-           
+
         }
         return false
     }
-    
+
 }
 module.exports = {
     BT: BinaryTree,
-    BST : BST,
+    BST: BST,
 };
