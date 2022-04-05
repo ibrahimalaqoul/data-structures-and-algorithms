@@ -1,5 +1,6 @@
 'use strict'
 const node = require('./node')
+const Queue = require('../stack-Queue/Queue')
 class BinaryTree {
     constructor(root = null) {
         this.root = root;
@@ -62,8 +63,9 @@ class BinaryTree {
     BreadthiFrst() {
         let arr = [];
         let qArr = [];
+        // const qArr = new Queue();
         qArr.push(this.root);
-        while (qArr.length > 0) {
+            while (qArr.length > 0) {
             let current = qArr.shift();
             arr.push(current.value);
             if (current.left != null) {
