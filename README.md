@@ -16,4 +16,5 @@
 * [challange 15,trees ](https://github.com/ibrahimalaqoul/data-structures-and-algorithms/blob/main/javascript/trees/Readme.md)
 * [challange 16,tree-max ](https://github.com/ibrahimalaqoul/data-structures-and-algorithms/blob/main/javascript/trees/Readme.md)
 * [challange 17,Breadth-first ](https://github.com/ibrahimalaqoul/data-structures-and-algorithms/blob/main/javascript/trees/Readme.md)
+* [challange 18,fizzBuzzTree ](https://github.com/ibrahimalaqoul/data-structures-and-algorithms/blob/main/javascript/trees/k-Ary-tree/Readme.md)
 
