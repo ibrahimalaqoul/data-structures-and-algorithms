@@ -1,7 +1,7 @@
 'user strict';
 const insertionSort=require('../insertion-sort');
 describe('insertionSort',()=>{
-    it('should not sorted  array',()=>{
+    it('testing not sorted  array',()=>{
         expect(insertionSort([3,1,2,5,4,6,8,7,10,9])).toEqual([1,2,3,4,5,6,7,8,9,10]);
     })
     it('testing nearly sorted array',()=>{

@@ -1,0 +1,17 @@
+'use strict';
+const mergeSort = require('../merge')
+describe('insertionSort',()=>{
+    it('testing not sorted  array',()=>{
+        expect(mergeSort([3,1,2,5,4,6,8,7,10,9])).toEqual([1,2,3,4,5,6,7,8,9,10]);
+    })
+    it('testing nearly sorted array',()=>{
+        expect(mergeSort([1,2,3,4,5,6,7,8,10,9])).toEqual([1,2,3,4,5,6,7,8,9,10]);
+    })
+    it('testing reverssed array',()=>{
+        expect(mergeSort([10,9,8,7,6,5,4,3,2,1])).toEqual([1,2,3,4,5,6,7,8,9,10]);
+    })
+    it('testing few uniques array',()=>{
+        expect(mergeSort([1,2,2,4,4,3,3,5,5])).toEqual([1,2,2,3,3,4,4,5,5]);
+    })
+})
+    
