@@ -18,4 +18,5 @@
 * [challange 17,Breadth-first ](https://github.com/ibrahimalaqoul/data-structures-and-algorithms/blob/main/javascript/trees/Readme.md)
 * [challange 18,fizzBuzzTree ](https://github.com/ibrahimalaqoul/data-structures-and-algorithms/blob/main/javascript/trees/k-Ary-tree/Readme.md)
 * [challange 26,Insertion sort  readme.md link](https://github.com/ibrahimalaqoul/data-structures-and-algorithms/blob/insertion-sort/javascript/Insertion-sort/Readme.md)
+* [challange 27,merge sort  readme.md link](https://github.com/ibrahimalaqoul/data-structures-and-algorithms/blob/main/javascript/merge-sort/Readme.md)
 
