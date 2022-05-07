@@ -5,6 +5,6 @@
 ## Approach & Efficiency
 usesd two while loops the frist to loop though the whole array and split it if it's length was even this one would be enough but if it's odd we need the second loop to push the last (lefted) array elements. 
 ## blog.md link
-[blog.md]()
+[blog.md](https://github.com/ibrahimalaqoul/data-structures-and-algorithms/blob/main/javascript/merge-sort/BLOG.md)
 ## Solution
 **npm test merge.test**
