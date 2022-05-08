@@ -52,8 +52,8 @@ all numbers smaller than the pivot are on the left, larger on the right.
 [1,3,4,6]
 
 in the swap function we swap the current index with the low index.
-3 <-- 1
-6 <-- 4
+* 3 <-- 1
+* 6 <-- 4
 ## pass 3 :
 this will be repeated until the array is sorted (by chaging the value of the pivot index) it will be repeated for all the array elements until the array is sorted.
 
