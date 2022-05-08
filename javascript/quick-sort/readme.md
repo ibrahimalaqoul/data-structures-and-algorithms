@@ -5,7 +5,7 @@
 ## Approach & Efficiency
 usesd a for recursive approach and for loop to guarantee the operation will be done the all array's elements. 
 ## blog.md link
-[blog.md]()
+[blog.md](https://github.com/ibrahimalaqoul/data-structures-and-algorithms/blob/quick-sort/javascript/quick-sort/blog.md)
 ## Solution
 
 **npm test quick-sort.test**
