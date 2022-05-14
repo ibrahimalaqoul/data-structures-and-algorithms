@@ -21,6 +21,7 @@
 * [challange 27,merge sort  readme.md link](https://github.com/ibrahimalaqoul/data-structures-and-algorithms/blob/main/javascript/merge-sort/Readme.md)
 * [challange 28,quick sort  readme.md link](https://github.com/ibrahimalaqoul/data-structures-and-algorithms/blob/main/javascript/quick-sort/readme.md
 )
+* [challange 30,Hash Tables  readme.md link](https://github.com/ibrahimalaqoul/data-structures-and-algorithms/blob/main/javascript/HashTables/README.MD)
 
 
 
