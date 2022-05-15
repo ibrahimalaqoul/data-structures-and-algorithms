@@ -22,6 +22,7 @@
 * [challange 28,quick sort  readme.md link](https://github.com/ibrahimalaqoul/data-structures-and-algorithms/blob/main/javascript/quick-sort/readme.md
 )
 * [challange 30,Hash Tables  readme.md link](https://github.com/ibrahimalaqoul/data-structures-and-algorithms/blob/main/javascript/HashTables/README.MD)
+* [challange 31,first Repeated  readme.md link](https://github.com/ibrahimalaqoul/data-structures-and-algorithms/blob/main/javascript/HashTables/first-repeated.test.js)
 
 
 
