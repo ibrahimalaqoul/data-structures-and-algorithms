@@ -2,7 +2,7 @@ const HashTable = require('./hashTables');
 
 function firstRepeated(str) {
     const hashTable = new HashTable(10);
-    let  strArr = str.split(' ');
+    let  strArr = str.split(/[, ]+/);
     console.log(strArr);
     let repeated='';
     for(let i = 0; i < strArr.length; i++){
