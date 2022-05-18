@@ -8,7 +8,7 @@ class HashTable{
         this.length = 0;
     }
     hash(key){
-    const result =  key.split('').reduce((hash, letter) => {
+    const result =  key.toString().split('').reduce((hash, letter) => {
         return hash + letter.charCodeAt();
     },0)*599 % this.size;
     return result;
