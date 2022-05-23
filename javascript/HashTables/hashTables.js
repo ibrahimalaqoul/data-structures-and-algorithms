@@ -79,6 +79,12 @@ class HashTable{
         }
         return `${key} is not in the hash table`;
     }
+    isEmpty(){
+        if(this.length === 0){
+            return true;
+        }
+        return false;
+    }
     
 
 }
