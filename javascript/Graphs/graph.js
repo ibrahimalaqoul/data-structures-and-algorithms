@@ -10,6 +10,7 @@ class Graph {
     }
     addEdge(node1, node2, weight) {
       node1 || node2 ? this.adjacencyList.get(node1).push(new Edge(node2, weight)) : null;
+      console.log("this.adjacencyList", this.adjacencyList);
     }
     getNodes() {
       return  this.adjacencyList.keys();
@@ -22,8 +23,50 @@ class Graph {
         //returns the number of nodes in the graph
         return this.adjacencyList.size;
     }
+    removeEdge(node1, node2) {
+        //remove an edge between two nodes
+        const neighbors = this.adjacencyList.get(node1);
+        console.log("1111111", neighbors);
+        const newNeighbors = neighbors.filter(neighbor => neighbor.vertex !== node2);
+        console.log("222222", newNeighbors);
+        this.adjacencyList.set(node1, newNeighbors);
+
+    }
+    removeNode(node) {
+        //remove a node from the graph
+        this.adjacencyList.delete(node);
+        this.adjacencyList.forEach((value, key) => {
+            const newNeighbors = value.filter(neighbor => neighbor.vertex !== node);
+            this.adjacencyList.set(key, newNeighbors);
+        });
+    }
 
 }
 
 module.exports = Graph;
 
+// let myGraph = new Graph();
+// myGraph.addNode(1);
+// myGraph.addNode(2);
+// myGraph.addNode(3);
+// myGraph.addNode(4);
+// myGraph.addNode(5);
+// myGraph.addEdge(1, 2, 5);
+// myGraph.addEdge(1, 3, 5);
+// myGraph.addEdge(2, 3, 5);
+// myGraph.addEdge(2, 4, 5);
+// myGraph.addEdge(4, 5, 5);
+// myGraph.addEdge(5, 3, 5);
+// console.log(myGraph.removeEdge(1, 2));
+// console.log(myGraph.getNeioughbors(1));
+// console.log(myGraph.size());
+// myGraph.removeEdge(1, 2);
+// myGraph.addEdge(1, 2, 5);
+// console.log(myGraph.getNeioughbors(1));
+// console.log(myGraph.size());
+// myGraph.removeNode(1);
+// console.log(myGraph.getNeioughbors(1));
+// console.log(myGraph.size());
+// console.log(myGraph.adjacencyList);
+// console.log(myGraph.getNodes());
+// console.log(myGraph.adjacencyList); 

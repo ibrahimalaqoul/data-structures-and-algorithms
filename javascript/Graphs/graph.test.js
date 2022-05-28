@@ -49,4 +49,20 @@ describe('Graph', () => {
         myGraph.addEdge(5, 3, 5);
         expect(myGraph.size()).toBe(5);
     });
+    it('should be able to remove an edge', () => {
+        myGraph.addNode(1);
+        myGraph.addNode(2);
+        myGraph.addEdge(1, 2, 5);
+        expect(myGraph.adjacencyList.get(1).length).toBe(1);
+        myGraph.removeEdge(1, 2);
+        expect(myGraph.adjacencyList.get(1).length).toBe(0);
+    })
+    it('should be able to remove a node', () => {
+        myGraph.addNode(1);
+        myGraph.addNode(2);
+        myGraph.addNode(3);  
+        expect(myGraph.size()).toBe(3);
+        myGraph.removeNode(1);
+        expect(myGraph.size()).toBe(2);
+    })
 })
