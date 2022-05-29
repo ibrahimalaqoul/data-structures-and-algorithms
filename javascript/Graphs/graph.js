@@ -6,16 +6,16 @@ class Graph {
         this.adjacencyList = new Map();
     }
     addNode(node) {
-      return  this.adjacencyList.set(node, []);
+        return this.adjacencyList.set(node, []);
     }
     addEdge(node1, node2, weight) {
-      node1 || node2 ? this.adjacencyList.get(node1).push(new Edge(node2, weight)) : null;
-      console.log("this.adjacencyList", this.adjacencyList);
+        node1 || node2 ? this.adjacencyList.get(node1).push(new Edge(node2, weight)) : null;
+        console.log("this.adjacencyList", this.adjacencyList);
     }
     getNodes() {
-      return  this.adjacencyList.keys();
+        return this.adjacencyList.keys();
     }
-    
+
     getNeioughbors(node) {
         return this.adjacencyList.get(node);
     }
@@ -39,6 +39,30 @@ class Graph {
             const newNeighbors = value.filter(neighbor => neighbor.vertex !== node);
             this.adjacencyList.set(key, newNeighbors);
         });
+    }
+    BreadthFirst(start) {
+        if (this.adjacencyList.size === 0) {
+            return 'The Graph is empty';
+        }
+        if (!this.adjacencyList.has(start)) {
+            return null;
+        }
+        let queue = [];
+        let visited = new Set();
+        let current;
+        queue.push(start);
+        visited.add(start);
+        while (queue.length) {
+            let front = queue.shift();
+            current = this.getNeioughbors(front);
+            current.forEach(neighbor => {
+                if (!visited.has(neighbor.vertex)) {
+                    queue.push(neighbor.vertex);
+                    visited.add(neighbor.vertex);
+                }
+            })
+        }
+        return visited;
     }
 
 }
