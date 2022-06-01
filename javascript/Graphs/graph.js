@@ -39,6 +39,16 @@ class Graph {
             const newNeighbors = value.filter(neighbor => neighbor.vertex !== node);
             this.adjacencyList.set(key, newNeighbors);
         });
+
+    }
+    getWeight(node1, node2) {
+        //returns the weight of an edge between two nodes
+        const neighbors = this.adjacencyList.get(node1);
+        const Weight = neighbors.find(neighbor => neighbor.vertex === node2);
+        //    console.log('111',Weight);
+        //    console.log('222',neighbors);
+        //    console.log(Weight.weight); 
+        return Weight.weight;
     }
     BreadthFirst(start) {
         if (this.adjacencyList.size === 0) {
@@ -76,6 +86,7 @@ module.exports = Graph;
 // myGraph.addNode(4);
 // myGraph.addNode(5);
 // myGraph.addEdge(1, 2, 5);
+// myGraph.addEdge(1, 3, 3);
 // myGraph.addEdge(1, 3, 5);
 // myGraph.addEdge(2, 3, 5);
 // myGraph.addEdge(2, 4, 5);
@@ -94,3 +105,4 @@ module.exports = Graph;
 // console.log(myGraph.adjacencyList);
 // console.log(myGraph.getNodes());
 // console.log(myGraph.adjacencyList); 
+// console.log(myGraph.getWeight(1,2));
