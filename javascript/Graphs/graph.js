@@ -45,10 +45,14 @@ class Graph {
         //returns the weight of an edge between two nodes
         const neighbors = this.adjacencyList.get(node1);
         const Weight = neighbors.find(neighbor => neighbor.vertex === node2);
+        if (Weight) {
+            return Weight.weight;
+        }else{
+            return null;
+        }
         //    console.log('111',Weight);
         //    console.log('222',neighbors);
         //    console.log(Weight.weight); 
-        return Weight.weight;
     }
     BreadthFirst(start) {
         if (this.adjacencyList.size === 0) {
@@ -105,4 +109,4 @@ module.exports = Graph;
 // console.log(myGraph.adjacencyList);
 // console.log(myGraph.getNodes());
 // console.log(myGraph.adjacencyList); 
-// console.log(myGraph.getWeight(1,2));
+// console.log(myGraph.getWeight(4,5));
