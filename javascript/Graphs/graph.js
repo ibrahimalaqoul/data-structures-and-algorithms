@@ -47,7 +47,7 @@ class Graph {
         const Weight = neighbors.find(neighbor => neighbor.vertex === node2);
         if (Weight) {
             return Weight.weight;
-        }else{
+        } else {
             return null;
         }
         //    console.log('111',Weight);
@@ -78,7 +78,38 @@ class Graph {
         }
         return visited;
     }
+    DepthFirst(start) {
+        if (this.adjacencyList.size === 0) {
+            return 'The Graph is empty';
+        }
+        if (!this.adjacencyList.has(start)) {
+            return null;
+        }
+        let visitedNodes = []
+        let stack = [];
+        const traverse = (node, visitedNodes) => {
+            if (!node) return;
+            visitedNodes.push(node);
+            if (!stack.includes(node)) {
+                stack.push(node);
+            }
+            const neighbors = this.getNeioughbors(node);
+            console.log("neighbors", neighbors);
+            for (let neighbor of neighbors) {
+                console.log("neighbor", neighbor);
+                if (!visitedNodes.includes(neighbor.vertex)) {
+                    traverse(neighbor.vertex, visitedNodes);
+                }
+            }
+            console.log('111',visitedNodes);
+            console.log('222',stack);
+        };
 
+        traverse(start, visitedNodes);
+
+        return stack;
+
+    }
 }
 
 module.exports = Graph;
